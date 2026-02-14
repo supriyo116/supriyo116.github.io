@@ -5,35 +5,64 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Supriyo Bhattacharya - Resume</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Supriyo Bhattacharya - AI/ML Developer, Software Engineer & Data Scientist from IIT Jammu. Specializing in machine learning, full-stack development, and algorithmic trading." name="description">
+  <meta content="AI Developer, Machine Learning, Software Engineer, Data Science, IIT Jammu, Python, Django, FastAPI" name="keywords">
     
+  <!-- Critical CSS - Inline for fastest render -->
   <style>
     html, body {
       overflow-x: hidden !important;
       width: 100vw;
       margin: 0;
       padding: 0;
+      font-family: "Roboto", sans-serif;
+    }
+    
+    /* Critical hero styles */
+    #hero {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .hero h2 {
+      margin: 0;
+      font-size: 64px;
+      font-weight: 700;
+      color: #45505B;
     }
   </style>
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="{{ url_for('static', path='img/Favicon.png') }}">
 
-  <!-- Fonts -->
+  <!-- Preconnect to external domains -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{{ url_for('static', path='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', path='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', path='vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', path='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', path='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="{{ url_for('static', path='css/main.css') }}" rel="stylesheet">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Load CSS asynchronously -->
+  <link href="{{ url_for('static', path='vendor/bootstrap/css/bootstrap.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="{{ url_for('static', path='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="{{ url_for('static', path='vendor/aos/aos.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="{{ url_for('static', path='vendor/glightbox/css/glightbox.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="{{ url_for('static', path='vendor/swiper/swiper-bundle.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link href="{{ url_for('static', path='css/main.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for no-JS -->
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', path='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='css/main.css') }}" rel="stylesheet">
+  </noscript>
 
 </head>
 
@@ -60,7 +89,11 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
 
-      <img src="{{ url_for('static', path='img/hero-bg.jpg') }}" alt="">
+      <!-- WebP with fallback -->
+      <picture>
+        <source srcset="{{ url_for('static', path='img/hero-bg.webp') }}" type="image/webp">
+        <img src="{{ url_for('static', path='img/hero-bg.jpg') }}" alt="Hero background" width="2304" height="1440">
+      </picture>
 
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
@@ -68,9 +101,9 @@
             <h2>Supriyo Bhattacharya</h2>
             <p>I'm <span class="typed" data-typed-items="Software Engineer, AI/ML Developer, Data Scientist">Electrical Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
-              <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/supriyo116"><i class="bi bi-linkedin"></i></a>
-              <a href="https://github.com/supriyo116"><i class="bi bi-github"></i></a>
+              <a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/supriyo116" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/supriyo116" aria-label="GitHub"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
@@ -91,7 +124,11 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="{{ url_for('static', path='img/profile-img.png') }}" class="img-fluid" alt="">
+            <!-- WebP with fallback for profile image -->
+            <picture>
+              <source srcset="{{ url_for('static', path='img/profile-img.webp') }}" type="image/webp">
+              <img src="{{ url_for('static', path='img/profile-img.png') }}" class="img-fluid" alt="Supriyo Bhattacharya" loading="lazy" width="560" height="560">
+            </picture>
           </div>
           <div class="col-lg-8 content">
             <h2>AI/ML Developer & Software Engineer.</h2>
@@ -351,52 +388,76 @@ and let's connect to build something amazing together!
 
             <!-- Projects Section -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <img src="{{ url_for('static', path='img/portfolio/quant.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="QuantLab - Algorithmic Trading">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/quant.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/quant.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="QuantLab - Algorithmic Trading"
+                     loading="lazy"
+                     width="473"
+                     height="438">
+              </picture>
               <div class="portfolio-info">
                 <h4>QuantLab - Algorithmic Trading</h4>
                 <p>A Django-based algorithmic trading engine integrating ML models for accurate price prediction.</p>
-                <a href="https://quantlab-dfde0b6ca1da.herokuapp.com/" target="_blank" class="details-link">
+                <a href="https://quantlab-dfde0b6ca1da.herokuapp.com/" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <img src="{{ url_for('static', path='img/portfolio/Fractals.jpg') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Fractal Geometry in Tsetlin Machines">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/Fractals.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/Fractals.jpg') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Fractal Geometry in Tsetlin Machines"
+                     loading="lazy"
+                     width="438"
+                     height="438">
+              </picture>
               <div class="portfolio-info">
                 <h4>Fractal Geometry in Tsetlin Machines</h4>
                 <p>Research integrating fractal geometry for enhanced pattern recognition in Tsetlin Machines.</p>
-                <a href="#" target="_blank" class="details-link">
+                <a href="#" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <img src="{{ url_for('static', path='img/portfolio/wavetext.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="WaveText - Messaging App">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/wavetext.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/wavetext.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="WaveText - Messaging App"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>WaveText - Messaging App</h4>
                 <p>A real-time messaging platform built with Django and WebSockets.</p>
-                <a href="https://github.com/supriyo116/wavetext" target="_blank" class="details-link">
+                <a href="https://github.com/supriyo116/wavetext" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <img src="{{ url_for('static', path='img/portfolio/Prosthetics.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="EMG Sensor in Prosthetics">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/Prosthetics.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/Prosthetics.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="EMG Sensor in Prosthetics"
+                     loading="lazy"
+                     width="679"
+                     height="382">
+              </picture>
               <div class="portfolio-info">
                 <h4>EMG Sensor in Prosthetics</h4>
                 <p>Developed a system using Raspberry Pi & EMG sensors to improve movement detection.</p>
-                <a href="https://github.com/supriyo116/BelowKneeProsthetics" target="_blank" class="details-link">
+                <a href="https://github.com/supriyo116/BelowKneeProsthetics" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
@@ -404,33 +465,51 @@ and let's connect to build something amazing together!
 
             <!-- Achievements Section -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
-              <img src="{{ url_for('static', path='img/portfolio/Panasonic.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Panasonic Asia Scholarship Winner (2022)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/Panasonic.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/Panasonic.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Panasonic Asia Scholarship Winner (2022)"
+                     loading="lazy"
+                     width="492"
+                     height="438">
+              </picture>
               <div class="portfolio-info">
                 <h4>Panasonic Asia Scholarship Winner (2022)</h4>
-                <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank" class="details-link">
+                <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
-              <img src="{{ url_for('static', path='img/portfolio/JEE Adv.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Secured 8934 Rank in JEE Advanced (2022)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/JEE%20Adv.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/JEE%20Adv.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Secured 8934 Rank in JEE Advanced (2022)"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>Secured 8934 Rank in JEE Advanced (2022)</h4>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
-              <img src="{{ url_for('static', path='img/portfolio/ChanakyaFellow.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Selected for Chanakya Fellowship Program for research on Agentic Tsetlin Machine for Skin Cancer Detection (2024)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/ChanakyaFellow.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/ChanakyaFellow.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Selected for Chanakya Fellowship Program for research on Agentic Tsetlin Machine for Skin Cancer Detection (2024)"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>Selected for Chanakya Fellowship Program for research on "Agentic Tsetlin Machine for Skin Cancer Detection" (2024)</h4>
-                <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank" class="details-link">
+                <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
@@ -438,36 +517,54 @@ and let's connect to build something amazing together!
 
             <!-- Certifications Section -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
-              <img src="{{ url_for('static', path='img/portfolio/udemy.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Machine Learning & Deep Learning (Udemy)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/udemy.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/udemy.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Machine Learning & Deep Learning (Udemy)"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>Machine Learning & Deep Learning (Udemy)</h4>
-                <a href="https://www.udemy.com/certificate/UC-32c8b2a4-6acb-468d-b684-9ac8f41f66d9/" target="_blank" class="details-link">
+                <a href="https://www.udemy.com/certificate/UC-32c8b2a4-6acb-468d-b684-9ac8f41f66d9/" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
-              <img src="{{ url_for('static', path='img/portfolio/google.jpg') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Advanced Data Analytics (Google)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/google.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/google.jpg') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Advanced Data Analytics (Google)"
+                     loading="lazy"
+                     width="438"
+                     height="438">
+              </picture>
               <div class="portfolio-info">
                 <h4>Advanced Data Analytics (Google)</h4>
-                <a href="https://coursera.org/share/ed61cd39d2436c8c7bf62f2e728bd845" target="_blank" class="details-link">
+                <a href="https://coursera.org/share/ed61cd39d2436c8c7bf62f2e728bd845" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
-              <img src="{{ url_for('static', path='img/portfolio/google.jpg') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Cybersecurity Professional Certificate (Google)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/google.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/google.jpg') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Cybersecurity Professional Certificate (Google)"
+                     loading="lazy"
+                     width="438"
+                     height="438">
+              </picture>
               <div class="portfolio-info">
                 <h4>Cybersecurity Professional Certificate (Google)</h4>
-                <a href="https://coursera.org/share/60453b2039ca2210c08ddd9daf3d3f22" target="_blank" class="details-link">
+                <a href="https://coursera.org/share/60453b2039ca2210c08ddd9daf3d3f22" target="_blank" class="details-link" rel="noopener">
                   <i class="bi bi-link-45deg"></i>
                 </a>
               </div>
@@ -475,27 +572,45 @@ and let's connect to build something amazing together!
 
             <!-- Responsibilities & Volunteering Section -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-responsibility">
-              <img src="{{ url_for('static', path='img/portfolio/IITJammu.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Class Representative (2022-2023)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/IITJammu.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/IITJammu.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Class Representative (2022-2023)"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>Class Representative (2022-2023)</h4>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-responsibility">
-              <img src="{{ url_for('static', path='img/portfolio/IITJammu.png') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="Placement Coordinator (2024-Present)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/IITJammu.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/IITJammu.png') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="Placement Coordinator (2024-Present)"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>Placement Coordinator (2024-Present)</h4>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-responsibility">
-              <img src="{{ url_for('static', path='img/portfolio/NSS.jpg') }}" 
-                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
-                   alt="NSS Volunteer (2023-2024)">
+              <picture>
+                <source srcset="{{ url_for('static', path='img/portfolio/NSS.webp') }}" type="image/webp">
+                <img src="{{ url_for('static', path='img/portfolio/NSS.jpg') }}" 
+                     style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;" 
+                     alt="NSS Volunteer (2023-2024)"
+                     loading="lazy"
+                     width="438"
+                     height="250">
+              </picture>
               <div class="portfolio-info">
                 <h4>NSS Volunteer (2023-2024)</h4>
               </div>
@@ -590,9 +705,9 @@ and let's connect to build something amazing together!
       <h3 class="sitename">Supriyo Bhattacharya</h3>
       <p>Running on caffeine, bad jokes, and the illusion of having it all together!</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/supriyo116"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/supriyo116"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/supriyo116" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/supriyo116" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
@@ -608,20 +723,20 @@ and let's connect to build something amazing together!
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="{{ url_for('static', path='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/aos/aos.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/typed.js/typed.umd.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/purecounter/purecounter_vanilla.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/waypoints/noframework.waypoints.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ url_for('static', path='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <!-- Vendor JS Files - Deferred for better performance -->
+  <script defer src="{{ url_for('static', path='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/php-email-form/validate.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/aos/aos.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/typed.js/typed.umd.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/waypoints/noframework.waypoints.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script defer src="{{ url_for('static', path='vendor/swiper/swiper-bundle.min.js') }}"></script>
 
   <!-- Main JS File -->
-  <script src="{{ url_for('static', path='js/main.js') }}"></script>
+  <script defer src="{{ url_for('static', path='js/main.js') }}"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {

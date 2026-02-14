@@ -3,9 +3,26 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
+from starlette.middleware.base import BaseHTTPMiddleware
 from pydantic import EmailStr
 
+class CacheControlMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request, call_next):
+        response = await call_next(request)
+        
+        # Cache static assets for 1 year
+        if request.url.path.startswith('/static/'):
+            # Images, fonts, etc - long cache
+            if any(ext in request.url.path for ext in ['.jpg', '.png', '.webp', '.woff2', '.woff', '.ttf']):
+                response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
+            # CSS, JS - shorter cache with revalidation
+            elif any(ext in request.url.path for ext in ['.css', '.js']):
+                response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
+        
+        return response
+    
 app = FastAPI()
+app.add_middleware(CacheControlMiddleware)
 
 app.mount("/static", StaticFiles(directory="mycv_fastapi/static"), name="static")
 templates = Jinja2Templates(directory="mycv_fastapi/templates")
