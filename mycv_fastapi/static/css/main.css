@@ -124,14 +124,14 @@ h5 {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .header~main {
+@media (min-width: 1200px) {
+  .header ~ main {
     margin-left: 160px;
   }
 
-  .header~main .hero {
+  .header ~ main .hero {
     margin-left: -160px;
-    width: 100vw;
+    width: calc(100% + 160px);
   }
 }
 
@@ -829,6 +829,24 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+@media (min-width: 1200px) {
+  .header ~ main .hero {
+    margin-left: -160px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
+  /* Stretch only the background image and overlay, not the container */
+  .hero img,
+  .hero::before {
+    position: absolute;
+    left: -160px;        /* Pull back to compensate for main's margin */
+    width: calc(100% + 160px);
+    right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
