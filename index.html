@@ -105,6 +105,13 @@
       font-weight: 700;
       color: #45505B;
     }
+
+    /* Override Bootstrap Icons font-display: block → swap (saves ~350ms FCP) */
+    @font-face {
+      font-family: "bootstrap-icons";
+      src: url("static/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6") format("woff2");
+      font-display: swap;
+    }
   </style>
 
   <!-- Favicons -->
@@ -114,6 +121,9 @@
   <!-- Preconnect to external domains -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+  <!-- Preload LCP hero image -->
+  <link rel="preload" href="static/img/hero-bg.webp" as="image" type="image/webp">
 
   <!-- Preload critical resources -->
   <link rel="preload"
