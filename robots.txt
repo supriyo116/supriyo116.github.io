@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /static/pdf/
+
+Sitemap: https://www.supriyo.dev/sitemap.xml
