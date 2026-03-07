@@ -44,54 +44,56 @@
   <meta name="twitter:image" content="https://www.supriyo.dev/static/img/profile-img.png">
 
   <!-- Structured Data: ProfilePage + Person -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "ProfilePage",
- "name": "Supriyo Bhattacharya",
- "url": "https://www.supriyo.dev/",
- "mainEntity": {
-   "@type": "Person",
-   "name": "Supriyo Bhattacharya",
-   "url": "https://www.supriyo.dev/",
-   "image": "https://www.supriyo.dev/static/img/profile-img.png",
-   "sameAs": [
-     "https://www.linkedin.com/in/supriyo116",
-     "https://github.com/supriyo116"
-   ],
-   "jobTitle": "AI/ML Developer & Software Engineer",
-   "worksFor": {
-     "@type": "Organization",
-     "name": "Auxo AI"
-   },
-   "alumniOf": {
-     "@type": "CollegeOrUniversity",
-     "name": "Indian Institute of Technology, Jammu",
-     "url": "https://www.iitjammu.ac.in/"
-   },
-   "address": {
-     "@type": "PostalAddress",
-     "addressLocality": "Kolkata",
-     "addressRegion": "West Bengal",
-     "addressCountry": "IN"
-   },
-   "email": "hello@supriyo.dev",
-   "telephone": "+91-74508-94997",
-   "description": "Electrical Engineering student at IIT Jammu specializing in AI/ML, software engineering, and data science.",
-   "knowsAbout": [
-     "Machine Learning",
-     "Deep Learning",
-     "Python",
-     "Django",
-     "FastAPI",
-     "LangGraph",
-     "Computer Vision",
-     "Data Science",
-     "Algorithmic Trading"
-   ]
- }
-}
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Supriyo Bhattacharya — Portfolio",
+    "url": "https://www.supriyo.dev/",
+    "dateCreated": "2024-01-01",
+    "dateModified": "2026-03-01",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Supriyo Bhattacharya",
+      "url": "https://www.supriyo.dev/",
+      "image": "https://www.supriyo.dev/static/img/profile-img.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/supriyo116",
+        "https://github.com/supriyo116"
+      ],
+      "jobTitle": "AI/ML Developer & Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Auxo AI"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology, Jammu",
+        "url": "https://www.iitjammu.ac.in/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
+      "email": "hello@supriyo.dev",
+      "telephone": "+91-74508-94997",
+      "description": "Electrical Engineering student at IIT Jammu specializing in AI/ML, software engineering, and data science.",
+      "knowsAbout": [
+        "Machine Learning",
+        "Deep Learning",
+        "Python",
+        "Django",
+        "FastAPI",
+        "LangGraph",
+        "Computer Vision",
+        "Data Science",
+        "Algorithmic Trading"
+      ]
+    }
+  }
+  </script>
 
   <!-- Structured Data: WebSite -->
   <script type="application/ld+json">
@@ -101,6 +103,81 @@
     "name": "Supriyo Bhattacharya - Portfolio",
     "url": "https://www.supriyo.dev/",
     "description": "Personal portfolio and resume of Supriyo Bhattacharya, AI/ML Developer and Software Engineer from IIT Jammu."
+  }
+  </script>
+
+  <!-- Structured Data: SoftwareApplication items -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Supriyo Bhattacharya — Projects",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "QuantLab — Algorithmic Trading Engine",
+          "description": "A Django-based algorithmic trading engine integrating ML models for accurate stock price prediction and portfolio management.",
+          "url": "https://quantlab-dfde0b6ca1da.herokuapp.com/",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "author": {
+            "@type": "Person",
+            "name": "Supriyo Bhattacharya"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "WaveText — Real-Time Messaging App",
+          "description": "A real-time messaging platform built with Django Channels and WebSockets, supporting instant communication.",
+          "url": "https://github.com/supriyo116/wavetext",
+          "applicationCategory": "CommunicationApplication",
+          "operatingSystem": "Web",
+          "author": {
+            "@type": "Person",
+            "name": "Supriyo Bhattacharya"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "EMG Sensor-Driven Prosthetics System",
+          "description": "Developed a system using Raspberry Pi & EMG sensors to improve movement detection accuracy for below-knee prosthetics.",
+          "url": "https://github.com/supriyo116/BelowKneeProsthetics",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "Linux",
+          "author": {
+            "@type": "Person",
+            "name": "Supriyo Bhattacharya"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: ScholarlyArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Fractal Geometry in Tsetlin Machines",
+    "description": "Research integrating fractal geometry for enhanced pattern recognition in Tsetlin Machines — interpretable ML for skin cancer detection.",
+    "author": {
+      "@type": "Person",
+      "name": "Supriyo Bhattacharya"
+    },
+    "datePublished": "2024-01-01",
+    "about": "Tsetlin Machines, Fractal Geometry, Skin Cancer Detection, Machine Learning"
   }
   </script>
 
@@ -181,7 +258,7 @@
 
 </head>
 
-<body class="index-page" itemscope itemtype="https://schema.org/ProfilePage">
+<body class="index-page">
 
   <header id="header" class="header d-flex flex-column justify-content-center" role="banner">
 
@@ -215,7 +292,7 @@
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
           <div class="col-lg-9">
-            <h1 itemprop="name">Supriyo Bhattacharya</h1>
+            <h1>Supriyo Bhattacharya</h1>
             <p>I'm <span class="typed" data-typed-items="Software Engineer, AI/ML Developer, Data Scientist">Electrical
                 Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links" aria-label="Social media profiles">
@@ -251,10 +328,10 @@
               <source srcset="static/img/profile-img.webp" type="image/webp">
               <img src="static/img/profile-img.png" class="img-fluid"
                 alt="Supriyo Bhattacharya — AI/ML Developer and Software Engineer from IIT Jammu" loading="lazy"
-                width="560" height="560" itemprop="image">
+                width="560" height="560">
             </picture>
           </div>
-          <div class="col-lg-8 content" itemscope itemtype="https://schema.org/Person">
+          <div class="col-lg-8 content">
             <h2>AI/ML Developer &amp; Software Engineer</h2>
             <p class="fst-italic py-3">
               With experience in data science, computer vision, and cybersecurity, I strive to create innovative
@@ -263,26 +340,19 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Birthday:</strong> <span
-                      itemprop="birthDate">1 Feb 2003</span></li>
+                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Birthday:</strong> <span>1 Feb 2003</span></li>
                   <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Website:</strong> <span><a
-                        href="https://www.supriyo.dev" rel="noopener" itemprop="url">www.supriyo.dev</a></span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Phone:</strong> <span
-                      itemprop="telephone"><a href="tel:+917450894997">+91 74508 94997</a></span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>City:</strong> <span
-                      itemprop="addressLocality">Kolkata, INDIA</span></li>
+                        href="https://www.supriyo.dev" rel="noopener">www.supriyo.dev</a></span></li>
+                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Phone:</strong> <span><a href="tel:+917450894997">+91 74508 94997</a></span></li>
+                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>City:</strong> <span>Kolkata, INDIA</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Age:</strong> <span>22</span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Degree:</strong> <span
-                      itemprop="hasCredential">B.Tech in Electrical Engineering</span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Email:</strong> <span
-                      itemprop="email"><a href="mailto:hello@supriyo.dev">hello@supriyo.dev</a></span>
-                  </li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>University:</strong> <span
-                      itemprop="alumniOf">Indian Institute of Technology, Jammu</span></li>
+                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Degree:</strong> <span>B.Tech in Electrical Engineering</span></li>
+                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Email:</strong> <span><a href="mailto:hello@supriyo.dev">hello@supriyo.dev</a></span></li>
+                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>University:</strong> <span>Indian Institute of Technology, Jammu</span></li>
                 </ul>
               </div>
             </div>
@@ -421,24 +491,23 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Summary</h3>
 
-            <div class="resume-item pb-0" itemscope itemtype="https://schema.org/Person">
-              <h4 itemprop="name">Supriyo Bhattacharya</h4>
+            <div class="resume-item pb-0">
+              <h4>Supriyo Bhattacharya</h4>
               <p><em>Driven by curiosity and a passion for problem-solving, always eager to learn, adapt, and take on
                   new challenges. Believes in continuous growth and making a meaningful impact through dedication and
                   creativity.</em></p>
               <ul>
-                <li itemprop="addressLocality">Kolkata, WB</li>
-                <li><a href="tel:+917450894997" itemprop="telephone">+91 74508 94997</a></li>
-                <li><a href="mailto:hello@supriyo.dev" itemprop="email">hello@supriyo.dev</a></li>
+                <li>Kolkata, WB</li>
+                <li><a href="tel:+917450894997">+91 74508 94997</a></li>
+                <li><a href="mailto:hello@supriyo.dev">hello@supriyo.dev</a></li>
               </ul>
             </div>
 
             <h3 class="resume-title">Education</h3>
-            <div class="resume-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-              <h4 itemprop="credentialCategory">B.Tech in Electrical Engineering</h4>
+            <div class="resume-item">
+              <h4>B.Tech in Electrical Engineering</h4>
               <h5><time datetime="2022">2022</time> – <time datetime="2026">2026</time> (Present)</h5>
-              <p><em itemprop="recognizedBy" itemscope itemtype="https://schema.org/EducationalOrganization"><span
-                    itemprop="name">Indian Institute of Technology, Jammu</span></em></p>
+              <p><em>Indian Institute of Technology, Jammu</em></p>
               <p>Pursuing a B.Tech in Electrical Engineering at IIT Jammu. Gaining expertise in AI, software
                 development, and problem-solving while balancing academics, research, and tech projects.</p>
             </div>
@@ -455,8 +524,8 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
 
-            <div class="resume-item" itemscope itemtype="https://schema.org/WorkBasedProgram">
-              <h4 itemprop="name">AI Engineer Intern at Auxo AI</h4>
+            <div class="resume-item">
+              <h4>AI Engineer Intern at Auxo AI</h4>
               <h5><time datetime="2026-01">Jan 2026</time> – Present</h5>
               <p><em>Bangalore, India</em></p>
               <ul>
@@ -466,8 +535,8 @@
               </ul>
             </div>
 
-            <div class="resume-item" itemscope itemtype="https://schema.org/WorkBasedProgram">
-              <h4 itemprop="name">Data Science Intern at Panasonic India Innovation Centre</h4>
+            <div class="resume-item">
+              <h4>Data Science Intern at Panasonic India Innovation Centre</h4>
               <h5><time datetime="2025-05">May 2025</time> – <time datetime="2025-08">Aug 2025</time></h5>
               <p><em>Bangalore, India</em></p>
               <ul>
@@ -478,8 +547,8 @@
               </ul>
             </div>
 
-            <div class="resume-item" itemscope itemtype="https://schema.org/WorkBasedProgram">
-              <h4 itemprop="name">Data Analyst Intern at Ernst &amp; Young (EY)</h4>
+            <div class="resume-item">
+              <h4>Data Analyst Intern at Ernst &amp; Young (EY)</h4>
               <h5><time datetime="2024-05">May 2024</time> – <time datetime="2024-07">Jul 2024</time></h5>
               <p><em>New Delhi, India</em></p>
               <ul>
@@ -490,8 +559,8 @@
               </ul>
             </div>
 
-            <div class="resume-item" itemscope itemtype="https://schema.org/WorkBasedProgram">
-              <h4 itemprop="name">Research Analyst Intern at Craving Alpha LLP</h4>
+            <div class="resume-item">
+              <h4>Research Analyst Intern at Craving Alpha LLP</h4>
               <h5><time datetime="2024-05">May 2024</time> – <time datetime="2024-06">Jun 2024</time></h5>
               <p><em>Kolkata, India</em></p>
               <ul>
@@ -532,28 +601,25 @@
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Projects -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects" itemscope
-              itemtype="https://schema.org/SoftwareApplication">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
               <picture>
                 <source srcset="static/img/portfolio/quant.webp" type="image/webp">
                 <img src="static/img/portfolio/quant.png"
                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
                   alt="QuantLab — Django-based algorithmic trading engine with ML price prediction" loading="lazy"
-                  width="473" height="438" itemprop="screenshot">
+                  width="473" height="438">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">QuantLab — Algorithmic Trading Engine</h3>
-                <p itemprop="description">A Django-based algorithmic trading engine integrating ML models for accurate
-                  stock price prediction and portfolio management.</p>
+                <h3>QuantLab — Algorithmic Trading Engine</h3>
+                <p>A Django-based algorithmic trading engine integrating ML models for accurate stock price prediction and portfolio management.</p>
                 <a href="https://quantlab-dfde0b6ca1da.herokuapp.com/" target="_blank" class="details-link"
-                  rel="noopener noreferrer" aria-label="View QuantLab Algorithmic Trading project" itemprop="url">
+                  rel="noopener noreferrer" aria-label="View QuantLab Algorithmic Trading project">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects" itemscope
-              itemtype="https://schema.org/ScholarlyArticle">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
               <picture>
                 <source srcset="static/img/portfolio/Fractals.webp" type="image/webp">
                 <img src="static/img/portfolio/Fractals.jpg"
@@ -562,9 +628,8 @@
                   width="438" height="438">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">Fractal Geometry in Tsetlin Machines</h3>
-                <p itemprop="description">Research integrating fractal geometry for enhanced pattern recognition in
-                  Tsetlin Machines — interpretable ML for skin cancer detection.</p>
+                <h3>Fractal Geometry in Tsetlin Machines</h3>
+                <p>Research integrating fractal geometry for enhanced pattern recognition in Tsetlin Machines — interpretable ML for skin cancer detection.</p>
                 <a href="#" target="_blank" class="details-link" rel="noopener noreferrer"
                   aria-label="View Fractal Geometry Tsetlin Machines research">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
@@ -572,49 +637,44 @@
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects" itemscope
-              itemtype="https://schema.org/SoftwareApplication">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
               <picture>
                 <source srcset="static/img/portfolio/wavetext.webp" type="image/webp">
                 <img src="static/img/portfolio/wavetext.png"
                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
                   alt="WaveText — real-time messaging app built with Django and WebSockets" loading="lazy" width="438"
-                  height="250" itemprop="screenshot">
+                  height="250">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">WaveText — Real-Time Messaging App</h3>
-                <p itemprop="description">A real-time messaging platform built with Django Channels and WebSockets,
-                  supporting instant communication.</p>
+                <h3>WaveText — Real-Time Messaging App</h3>
+                <p>A real-time messaging platform built with Django Channels and WebSockets, supporting instant communication.</p>
                 <a href="https://github.com/supriyo116/wavetext" target="_blank" class="details-link"
-                  rel="noopener noreferrer" aria-label="View WaveText messaging app on GitHub" itemprop="url">
+                  rel="noopener noreferrer" aria-label="View WaveText messaging app on GitHub">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects" itemscope
-              itemtype="https://schema.org/SoftwareApplication">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
               <picture>
                 <source srcset="static/img/portfolio/Prosthetics.webp" type="image/webp">
                 <img src="static/img/portfolio/Prosthetics.png"
                   style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
                   alt="EMG Sensor-controlled prosthetics system using Raspberry Pi for movement detection"
-                  loading="lazy" width="679" height="382" itemprop="screenshot">
+                  loading="lazy" width="679" height="382">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">EMG Sensor-Driven Prosthetics System</h3>
-                <p itemprop="description">Developed a system using Raspberry Pi &amp; EMG sensors to improve movement
-                  detection accuracy for below-knee prosthetics.</p>
+                <h3>EMG Sensor-Driven Prosthetics System</h3>
+                <p>Developed a system using Raspberry Pi &amp; EMG sensors to improve movement detection accuracy for below-knee prosthetics.</p>
                 <a href="https://github.com/supriyo116/BelowKneeProsthetics" target="_blank" class="details-link"
-                  rel="noopener noreferrer" aria-label="View EMG Prosthetics project on GitHub" itemprop="url">
+                  rel="noopener noreferrer" aria-label="View EMG Prosthetics project on GitHub">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
             <!-- Achievements -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements" itemscope
-              itemtype="https://schema.org/Award">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
               <picture>
                 <source srcset="static/img/portfolio/Panasonic.webp" type="image/webp">
                 <img src="static/img/portfolio/Panasonic.png"
@@ -623,7 +683,7 @@
                   height="438">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">Panasonic Asia Scholarship Winner (2022)</h3>
+                <h3>Panasonic Asia Scholarship Winner (2022)</h3>
                 <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank"
                   class="details-link" rel="noopener noreferrer"
                   aria-label="View Panasonic Asia Scholarship certificate">
@@ -632,8 +692,7 @@
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements" itemscope
-              itemtype="https://schema.org/Award">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
               <picture>
                 <source srcset="static/img/portfolio/JEE%20Adv.webp" type="image/webp">
                 <img src="static/img/portfolio/JEE%20Adv.png"
@@ -641,14 +700,12 @@
                   alt="JEE Advanced 2022 — All India Rank 8934" loading="lazy" width="438" height="250">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">JEE Advanced 2022 — AIR 8934</h3>
-                <p>Secured All India Rank 8934 in JEE Advanced 2022, one of India's most competitive engineering
-                  entrance exams.</p>
+                <h3>JEE Advanced 2022 — AIR 8934</h3>
+                <p>Secured All India Rank 8934 in JEE Advanced 2022, one of India's most competitive engineering entrance exams.</p>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements" itemscope
-              itemtype="https://schema.org/Award">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
               <picture>
                 <source srcset="static/img/portfolio/ChanakyaFellow.webp" type="image/webp">
                 <img src="static/img/portfolio/ChanakyaFellow.png"
@@ -657,9 +714,8 @@
                   loading="lazy" width="438" height="250">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">Chanakya Fellowship Program (2024)</h3>
-                <p>Selected for government-funded research fellowship on "Agentic Tsetlin Machine for Skin Cancer
-                  Detection."</p>
+                <h3>Chanakya Fellowship Program (2024)</h3>
+                <p>Selected for government-funded research fellowship on "Agentic Tsetlin Machine for Skin Cancer Detection."</p>
                 <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank"
                   class="details-link" rel="noopener noreferrer" aria-label="View Chanakya Fellowship certificate">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
@@ -668,8 +724,7 @@
             </article>
 
             <!-- Certifications -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications" itemscope
-              itemtype="https://schema.org/EducationalOccupationalCredential">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
               <picture>
                 <source srcset="static/img/portfolio/udemy.webp" type="image/webp">
                 <img src="static/img/portfolio/udemy.png"
@@ -678,17 +733,16 @@
                   width="438" height="250">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">Machine Learning &amp; Deep Learning (Udemy)</h3>
+                <h3>Machine Learning &amp; Deep Learning (Udemy)</h3>
                 <a href="https://www.udemy.com/certificate/UC-32c8b2a4-6acb-468d-b684-9ac8f41f66d9/" target="_blank"
                   class="details-link" rel="noopener noreferrer"
-                  aria-label="View Udemy ML and Deep Learning certificate" itemprop="url">
+                  aria-label="View Udemy ML and Deep Learning certificate">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications" itemscope
-              itemtype="https://schema.org/EducationalOccupationalCredential">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
               <picture>
                 <source srcset="static/img/portfolio/google.webp" type="image/webp">
                 <img src="static/img/portfolio/google.jpg"
@@ -696,17 +750,16 @@
                   alt="Google Advanced Data Analytics Professional Certificate" loading="lazy" width="438" height="438">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">Advanced Data Analytics (Google)</h3>
+                <h3>Advanced Data Analytics (Google)</h3>
                 <a href="https://coursera.org/share/ed61cd39d2436c8c7bf62f2e728bd845" target="_blank"
                   class="details-link" rel="noopener noreferrer"
-                  aria-label="View Google Advanced Data Analytics certificate" itemprop="url">
+                  aria-label="View Google Advanced Data Analytics certificate">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications" itemscope
-              itemtype="https://schema.org/EducationalOccupationalCredential">
+            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
               <picture>
                 <source srcset="static/img/portfolio/google.webp" type="image/webp">
                 <img src="static/img/portfolio/google.jpg"
@@ -714,10 +767,10 @@
                   alt="Google Cybersecurity Professional Certificate" loading="lazy" width="438" height="438">
               </picture>
               <div class="portfolio-info">
-                <h3 itemprop="name">Cybersecurity Professional Certificate (Google)</h3>
+                <h3>Cybersecurity Professional Certificate (Google)</h3>
                 <a href="https://coursera.org/share/60453b2039ca2210c08ddd9daf3d3f22" target="_blank"
                   class="details-link" rel="noopener noreferrer"
-                  aria-label="View Google Cybersecurity Professional certificate" itemprop="url">
+                  aria-label="View Google Cybersecurity Professional certificate">
                   <i class="bi bi-link-45deg" aria-hidden="true"></i>
                 </a>
               </div>
