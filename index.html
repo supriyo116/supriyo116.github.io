@@ -190,24 +190,29 @@
       overflow-x: hidden;
       width: 100%;
       font-family: "Roboto", sans-serif;
+      background-color: #f2f4f8;
     }
 
     #hero {
       min-height: 100vh;
+      width: 100vw;
+      background-image: url("static/img/hero-bg.jpg");
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       position: relative;
+      padding: 0;
       overflow: hidden;
     }
 
-    .hero h2 {
+    .hero-title {
       margin: 0;
-      font-size: 64px;
+      font-size: clamp(40px, 6vw, 64px);
       font-weight: 700;
-      color: #45505B;
+      color: #1e293b;
     }
 
-    /* Override Bootstrap Icons font-display: block → swap (saves ~350ms FCP) */
+    /* Override Bootstrap Icons font-display: block -> swap (saves ~350ms FCP) */
     @font-face {
       font-family: "bootstrap-icons";
       src: url("static/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6") format("woff2");
@@ -228,7 +233,7 @@
 
   <!-- Preload critical resources -->
   <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Load CSS asynchronously -->
@@ -246,7 +251,7 @@
   <!-- Fallback for no-JS -->
   <noscript>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet">
     <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -281,29 +286,28 @@
   <main class="main" role="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background" aria-label="Introduction">
+    <section id="hero" class="hero" aria-label="Introduction">
 
-      <picture>
-        <source srcset="static/img/hero-bg.webp" type="image/webp">
-        <img src="static/img/hero-bg.jpg" alt="Supriyo Bhattacharya portfolio hero background" width="2304"
-          height="1440" fetchpriority="high">
-      </picture>
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h1>Supriyo Bhattacharya</h1>
-            <p>I'm <span class="typed" data-typed-items="Software Engineer, AI/ML Developer, Data Scientist">Electrical
-                Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links" aria-label="Social media profiles">
-              <a href="https://www.linkedin.com/in/supriyo116" aria-label="Supriyo Bhattacharya on LinkedIn"
-                rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-              <a href="https://github.com/supriyo116" aria-label="Supriyo Bhattacharya on GitHub"
-                rel="noopener noreferrer" target="_blank"><i class="bi bi-github" aria-hidden="true"></i></a>
-              <a href="https://mi.supriyo.dev" aria-label="QuantLab Market Intelligence by Supriyo"
-                title="QuantLab Market Intelligence" rel="noopener noreferrer" target="_blank"><i
-                  class="bi bi-graph-up-arrow" aria-hidden="true"></i></a>
-            </div>
+      <div class="hero-shell">
+        <div class="hero-left" data-aos="fade-up">
+          <h1 class="hero-title">Supriyo Bhattacharya</h1>
+          <p class="hero-role">I'm <span class="typed"
+              data-typed-items="Software Engineer,AI/ML Developer,Data Scientist">AI/ML Developer</span><span
+              class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+          <p class="hero-intro">Building LLM products, data systems, and scalable APIs.</p>
+          <div class="hero-cta">
+            <a class="hero-btn hero-btn-primary" href="static/pdf/Resume.pdf" download
+              aria-label="Download Supriyo Bhattacharya resume PDF">Resume</a>
+            <a class="hero-btn hero-btn-ghost" href="#portfolio" aria-label="View Supriyo Bhattacharya projects">Work</a>
+          </div>
+          <div class="social-links hero-social" aria-label="Social media profiles">
+            <a href="https://www.linkedin.com/in/supriyo116" aria-label="Supriyo Bhattacharya on LinkedIn"
+              rel="noopener noreferrer" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/supriyo116" aria-label="Supriyo Bhattacharya on GitHub"
+              rel="noopener noreferrer" target="_blank"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="https://mi.supriyo.dev" aria-label="QuantLab Market Intelligence by Supriyo"
+              title="QuantLab Market Intelligence" rel="noopener noreferrer" target="_blank"><i
+                class="bi bi-graph-up-arrow" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -314,16 +318,17 @@
     <section id="about" class="about section" aria-labelledby="about-heading">
 
       <div class="container section-title" data-aos="fade-up">
+        <span class="section-label">ABOUT</span>
         <h2 id="about-heading">About</h2>
-        <p>I am an Electrical Engineering student at IIT Jammu, passionate about exploring technology and solving
-          complex problems. I enjoy learning new skills and tackling challenges, always looking for opportunities to
-          grow and develop both personally and professionally.</p>
+        <p class="section-lead">I am an Electrical Engineering student at IIT Jammu, passionate about exploring
+          technology and solving complex problems. I enjoy learning new skills and tackling challenges, always looking
+          for opportunities to grow and develop both personally and professionally.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
+        <div class="row gy-4 align-items-center about-grid">
+          <div class="col-lg-4 about-photo">
             <picture>
               <source srcset="static/img/profile-img.webp" type="image/webp">
               <img src="static/img/profile-img.png" class="img-fluid"
@@ -331,37 +336,49 @@
                 width="560" height="560">
             </picture>
           </div>
-          <div class="col-lg-8 content">
-            <h2>AI/ML Developer &amp; Software Engineer</h2>
-            <p class="fst-italic py-3">
+          <div class="col-lg-8 about-content">
+            <h3 class="about-role">AI/ML Developer &amp; Software Engineer</h3>
+            <p class="about-intro">
               With experience in data science, computer vision, and cybersecurity, I strive to create innovative
               solutions that drive efficiency and impact.
             </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Birthday:</strong> <span>1 Feb 2003</span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Website:</strong> <span><a
-                        href="https://www.supriyo.dev" rel="noopener">www.supriyo.dev</a></span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Phone:</strong> <span><a href="tel:+917450894997">+91 74508 94997</a></span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>City:</strong> <span>Kolkata, INDIA</span></li>
-                </ul>
+            <dl class="about-details">
+              <div class="detail-row">
+                <dt>Birthday</dt>
+                <dd>1 Feb 2003</dd>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Age:</strong> <span>22</span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Degree:</strong> <span>B.Tech in Electrical Engineering</span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>Email:</strong> <span><a href="mailto:hello@supriyo.dev">hello@supriyo.dev</a></span></li>
-                  <li><i class="bi bi-chevron-right" aria-hidden="true"></i> <strong>University:</strong> <span>Indian Institute of Technology, Jammu</span></li>
-                </ul>
+              <div class="detail-row">
+                <dt>Website</dt>
+                <dd><a href="https://www.supriyo.dev" rel="noopener">www.supriyo.dev</a></dd>
               </div>
-            </div>
-            <p class="py-3">
-              <i>I am always eager to collaborate on cutting-edge projects, learn new technologies, and contribute to
-                impactful innovations. If you're interested in my work and skills, feel free to
-                <a href="static/pdf/Resume.pdf" download aria-label="Download Supriyo Bhattacharya's resume PDF"
-                  style="color: #007bff; text-decoration: none; font-weight: bold;">download my resume</a>
-                and let's connect to build something amazing together!</i>
+              <div class="detail-row">
+                <dt>Phone</dt>
+                <dd><a href="tel:+917450894997">+91 74508 94997</a></dd>
+              </div>
+              <div class="detail-row">
+                <dt>City</dt>
+                <dd>Kolkata, India</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Age</dt>
+                <dd>22</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Degree</dt>
+                <dd>B.Tech in Electrical Engineering</dd>
+              </div>
+              <div class="detail-row">
+                <dt>Email</dt>
+                <dd><a href="mailto:hello@supriyo.dev">hello@supriyo.dev</a></dd>
+              </div>
+              <div class="detail-row">
+                <dt>University</dt>
+                <dd>Indian Institute of Technology, Jammu</dd>
+              </div>
+            </dl>
+            <p class="about-cta">
+              <a href="static/pdf/Resume.pdf" download aria-label="Download Supriyo Bhattacharya's resume PDF">Download
+                my resume -&gt;</a>
             </p>
           </div>
         </div>
@@ -374,104 +391,64 @@
     <section id="skills" class="skills section" aria-labelledby="skills-heading">
 
       <div class="container section-title" data-aos="fade-up">
+        <span class="section-label">SKILLS</span>
         <h2 id="skills-heading">Skills</h2>
-        <p>Strengths &amp; Specializations</p>
+        <p class="section-lead">Strengths &amp; Specializations</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>DSA (Data Structures &amp; Algorithms)</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="DSA proficiency 80%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Computer Networks</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="Computer Networks proficiency 90%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Django</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="Django proficiency 80%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>DBMS, SQL, Neo4j (Graph Databases)</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="DBMS SQL Neo4j proficiency 90%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Version Control (Git)</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="Version Control Git proficiency 100%"></div>
-              </div>
-            </div>
-
+        <div class="skills-list skills-animation">
+          <div class="skill-row">
+            <span class="skill-name">DSA (Data Structures &amp; Algorithms)</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
           </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>FastAPI</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="FastAPI proficiency 80%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Computer Vision</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="Computer Vision proficiency 75%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Pandas, Numpy &amp; PySpark</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="Pandas Numpy PySpark proficiency 90%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>Microsoft Azure and Heroku</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="Microsoft Azure and Heroku proficiency 80%"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"><span>LangGraph (LLM Agent Orchestration)</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                  aria-label="LangGraph proficiency 80%"></div>
-              </div>
-            </div>
-
+          <div class="skill-row">
+            <span class="skill-name">Computer Networks</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
           </div>
-
+          <div class="skill-row">
+            <span class="skill-name">Django</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">DBMS, SQL, Neo4j (Graph Databases)</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Version Control (Git)</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">FastAPI</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Computer Vision</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Intermediate</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Pandas, NumPy &amp; PySpark</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Microsoft Azure &amp; Heroku</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">LangGraph (LLM Agent Orchestration)</span>
+            <span class="skill-line"></span>
+            <span class="skill-level">Advanced</span>
+          </div>
         </div>
-
       </div>
 
     </section><!-- /Skills Section -->
@@ -480,99 +457,83 @@
     <section id="resume" class="resume section" aria-labelledby="resume-heading">
 
       <div class="container section-title" data-aos="fade-up">
+        <span class="section-label">RESUME</span>
         <h2 id="resume-heading">Resume</h2>
-        <p>AI/ML Developer | Software Engineer | Data Science | Python, SQL, Django, FastAPI, LangGraph</p>
+        <p class="section-lead">AI/ML Developer | Software Engineer | Data Science | Python, SQL, Django, FastAPI,
+          LangGraph</p>
       </div>
 
       <div class="container">
-
-        <div class="row">
-
+        <div class="row resume-columns">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
+            <span class="section-label">EDUCATION</span>
+            <div class="resume-timeline">
+              <article class="resume-entry">
+                <h3 class="resume-role">B.Tech in Electrical Engineering</h3>
+                <div class="resume-meta"><time datetime="2022">2022</time> &ndash; <time datetime="2026">2026</time>
+                  (Present) &middot; Indian Institute of Technology, Jammu</div>
+                <p>Pursuing a B.Tech in Electrical Engineering at IIT Jammu. Gaining expertise in AI, software
+                  development, and problem-solving while balancing academics, research, and tech projects.</p>
+              </article>
 
-            <div class="resume-item pb-0">
-              <h4>Supriyo Bhattacharya</h4>
-              <p><em>Driven by curiosity and a passion for problem-solving, always eager to learn, adapt, and take on
-                  new challenges. Believes in continuous growth and making a meaningful impact through dedication and
-                  creativity.</em></p>
-              <ul>
-                <li>Kolkata, WB</li>
-                <li><a href="tel:+917450894997">+91 74508 94997</a></li>
-                <li><a href="mailto:hello@supriyo.dev">hello@supriyo.dev</a></li>
-              </ul>
+              <article class="resume-entry">
+                <h3 class="resume-role">Class 12th (Science)</h3>
+                <div class="resume-meta"><time datetime="2020">2020</time> &ndash; <time datetime="2021">2021</time>
+                  &middot; Kendriya Vidyalaya Chabua, Dibrugarh</div>
+                <p>Result: 94%</p>
+              </article>
             </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>B.Tech in Electrical Engineering</h4>
-              <h5><time datetime="2022">2022</time> – <time datetime="2026">2026</time> (Present)</h5>
-              <p><em>Indian Institute of Technology, Jammu</em></p>
-              <p>Pursuing a B.Tech in Electrical Engineering at IIT Jammu. Gaining expertise in AI, software
-                development, and problem-solving while balancing academics, research, and tech projects.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Class 12th (Science)</h4>
-              <h5><time datetime="2020">2020</time> – <time datetime="2021">2021</time></h5>
-              <p><em>Kendriya Vidyalaya Chabua, Dibrugarh</em></p>
-              <p>Result: 94%</p>
-            </div>
-
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
+            <span class="section-label">EXPERIENCE</span>
+            <div class="resume-timeline">
+              <article class="resume-entry">
+                <h3 class="resume-role">AI Engineer Intern &middot; Auxo AI</h3>
+                <div class="resume-meta"><time datetime="2026-01">Jan 2026</time> &ndash; Present &middot; Bangalore,
+                  India</div>
+                <p class="resume-point">&middot; Developing Generative AI solutions using LLMs for enterprise business
+                  applications.</p>
+                <p class="resume-point">&middot; Building and deploying autonomous AI agents for workflow automation using
+                  LangGraph.</p>
+                <p class="resume-point">&middot; Implementing RAG (Retrieval-Augmented Generation) pipelines and scalable
+                  FastAPI backends.</p>
+              </article>
 
-            <div class="resume-item">
-              <h4>AI Engineer Intern at Auxo AI</h4>
-              <h5><time datetime="2026-01">Jan 2026</time> – Present</h5>
-              <p><em>Bangalore, India</em></p>
-              <ul>
-                <li>Developing Generative AI solutions using LLMs for enterprise business applications.</li>
-                <li>Building and deploying autonomous AI agents for workflow automation using LangGraph.</li>
-                <li>Implementing RAG (Retrieval-Augmented Generation) pipelines and scalable FastAPI backends.</li>
-              </ul>
+              <article class="resume-entry">
+                <h3 class="resume-role">Data Science Intern &middot; Panasonic India Innovation Centre</h3>
+                <div class="resume-meta"><time datetime="2025-05">May 2025</time> &ndash; <time datetime="2025-08">Aug
+                    2025</time> &middot; Bangalore, India</div>
+                <p class="resume-point">&middot; Engineered big data pipelines using Apache Spark for large-scale AC fault
+                  prediction.</p>
+                <p class="resume-point">&middot; Leveraged sensory IoT data to develop predictive maintenance workflows.</p>
+                <p class="resume-point">&middot; Designed a hybrid ML model achieving 97% accuracy and 99% precision,
+                  significantly reducing equipment downtime.</p>
+              </article>
+
+              <article class="resume-entry">
+                <h3 class="resume-role">Data Analyst Intern &middot; Ernst &amp; Young (EY)</h3>
+                <div class="resume-meta"><time datetime="2024-05">May 2024</time> &ndash; <time datetime="2024-07">Jul
+                    2024</time> &middot; New Delhi, India</div>
+                <p class="resume-point">&middot; Used Python and SQL to perform complex data analysis and generate actionable
+                  business insights.</p>
+                <p class="resume-point">&middot; Analyzed India's trade data from MeiTY to identify key trends and patterns.</p>
+                <p class="resume-point">&middot; Collaborated with senior analysts on diverse projects, applying EY
+                  methodologies for data-driven strategies.</p>
+              </article>
+
+              <article class="resume-entry">
+                <h3 class="resume-role">Research Analyst Intern &middot; Craving Alpha LLP</h3>
+                <div class="resume-meta"><time datetime="2024-05">May 2024</time> &ndash; <time datetime="2024-06">Jun
+                    2024</time> &middot; Kolkata, India</div>
+                <p class="resume-point">&middot; Assisted in developing and testing methods for equity selection and risk
+                  management.</p>
+                <p class="resume-point">&middot; Implemented tools for data processing, backtesting, and performance analysis
+                  using Python.</p>
+              </article>
             </div>
-
-            <div class="resume-item">
-              <h4>Data Science Intern at Panasonic India Innovation Centre</h4>
-              <h5><time datetime="2025-05">May 2025</time> – <time datetime="2025-08">Aug 2025</time></h5>
-              <p><em>Bangalore, India</em></p>
-              <ul>
-                <li>Engineered big data pipelines using Apache Spark for large-scale AC fault prediction.</li>
-                <li>Leveraged sensory IoT data to develop predictive maintenance workflows.</li>
-                <li>Designed a hybrid ML model achieving 97% accuracy and 99% precision, significantly reducing
-                  equipment downtime.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Data Analyst Intern at Ernst &amp; Young (EY)</h4>
-              <h5><time datetime="2024-05">May 2024</time> – <time datetime="2024-07">Jul 2024</time></h5>
-              <p><em>New Delhi, India</em></p>
-              <ul>
-                <li>Used Python and SQL to perform complex data analysis and generate actionable business insights.</li>
-                <li>Analyzed India's trade data from MeiTY to identify key trends and patterns.</li>
-                <li>Collaborated with senior analysts on diverse projects, applying EY methodologies for data-driven
-                  strategies.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Research Analyst Intern at Craving Alpha LLP</h4>
-              <h5><time datetime="2024-05">May 2024</time> – <time datetime="2024-06">Jun 2024</time></h5>
-              <p><em>Kolkata, India</em></p>
-              <ul>
-                <li>Assisted in developing and testing methods for equity selection and risk management.</li>
-                <li>Implemented tools for data processing, backtesting, and performance analysis using Python.</li>
-              </ul>
-            </div>
-
           </div>
-
         </div>
-
       </div>
 
     </section><!-- /Resume Section -->
@@ -581,237 +542,212 @@
     <section id="portfolio" class="portfolio section" aria-labelledby="portfolio-heading">
 
       <div class="container section-title" data-aos="fade-up">
+        <span class="section-label">PORTFOLIO</span>
         <h2 id="portfolio-heading">Portfolio</h2>
-        <p>A Glimpse of My Work: Projects, Innovations &amp; Achievements</p>
+        <p class="section-lead">A Glimpse of My Work: Projects, Innovations &amp; Achievements</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter=".filter-achievements" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100" role="tablist"
             aria-label="Portfolio filter">
-            <li data-filter="*" class="filter-active" role="tab">All</li>
-            <li data-filter=".filter-achievements" role="tab">Achievements</li>
+            <!-- "All" removed: default view is Achievements only -->
+            <li data-filter=".filter-achievements" class="filter-active" role="tab">Achievements</li>
             <li data-filter=".filter-projects" role="tab">Projects</li>
             <li data-filter=".filter-certifications" role="tab">Certifications</li>
             <li data-filter=".filter-responsibility" role="tab">Responsibilities &amp; Volunteering</li>
           </ul>
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Projects -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <picture>
-                <source srcset="static/img/portfolio/quant.webp" type="image/webp">
-                <img src="static/img/portfolio/quant.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="QuantLab — Django-based algorithmic trading engine with ML price prediction" loading="lazy"
-                  width="473" height="438">
-              </picture>
-              <div class="portfolio-info">
-                <h3>QuantLab — Algorithmic Trading Engine</h3>
-                <p>A Django-based algorithmic trading engine integrating ML models for accurate stock price prediction and portfolio management.</p>
-                <a href="https://quantlab-dfde0b6ca1da.herokuapp.com/" target="_blank" class="details-link"
-                  rel="noopener noreferrer" aria-label="View QuantLab Algorithmic Trading project">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
+            <article class="project-row portfolio-item isotope-item filter-projects" data-aos="fade-right">
+              <div class="project-visual">
+                <div class="project-circle">
+                  <picture>
+                    <source srcset="static/img/portfolio/quant.webp" type="image/webp">
+                    <img src="static/img/portfolio/quant.png"
+                      alt="QuantLab — Django-based algorithmic trading engine with ML price prediction" loading="lazy"
+                      width="600" height="600">
+                  </picture>
+                </div>
+              </div>
+              <div class="project-content">
+                <span class="project-label">AI &middot; Backend &middot; Finance</span>
+                <h3 class="project-title">QuantLab — Algorithmic Trading Engine</h3>
+                <p class="project-desc">Django-based algorithmic trading engine integrating ML models for accurate
+                  stock price prediction and portfolio management. Deployed live on Heroku.</p>
+                <div class="project-tags">
+                  <span>Django</span><span>Python</span><span>ML</span><span>Heroku</span>
+                </div>
+                <p class="project-highlight">97% model accuracy &middot; Live deployment</p>
+                <a href="https://quantlab-dfde0b6ca1da.herokuapp.com/" target="_blank" rel="noopener"
+                  class="project-link">View Project -&gt;</a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <picture>
-                <source srcset="static/img/portfolio/Fractals.webp" type="image/webp">
-                <img src="static/img/portfolio/Fractals.jpg"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Fractal Geometry integration in Tsetlin Machines for enhanced pattern recognition" loading="lazy"
-                  width="438" height="438">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Fractal Geometry in Tsetlin Machines</h3>
-                <p>Research integrating fractal geometry for enhanced pattern recognition in Tsetlin Machines — interpretable ML for skin cancer detection.</p>
-                <a href="#" target="_blank" class="details-link" rel="noopener noreferrer"
-                  aria-label="View Fractal Geometry Tsetlin Machines research">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
+            <article class="project-row project-row--flip portfolio-item isotope-item filter-projects"
+              data-aos="fade-left">
+              <div class="project-visual">
+                <div class="project-circle">
+                  <picture>
+                    <source srcset="static/img/portfolio/Fractals.webp" type="image/webp">
+                    <img src="static/img/portfolio/Fractals.jpg"
+                      alt="Fractal Geometry integration in Tsetlin Machines for enhanced pattern recognition"
+                      loading="lazy" width="600" height="600">
+                  </picture>
+                </div>
+              </div>
+              <div class="project-content">
+                <span class="project-label">Research &middot; ML &middot; Vision</span>
+                <h3 class="project-title">Fractal Geometry in Tsetlin Machines</h3>
+                <p class="project-desc">Research integrating fractal geometry for enhanced pattern recognition in
+                  Tsetlin Machines, focused on interpretable ML for skin cancer detection.</p>
+                <div class="project-tags">
+                  <span>Research</span><span>Python</span><span>Tsetlin</span>
+                </div>
+                <p class="project-highlight">Interpretable ML for medical imaging</p>
+                <a href="#" target="_blank" rel="noopener" class="project-link">View Project -&gt;</a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <picture>
-                <source srcset="static/img/portfolio/wavetext.webp" type="image/webp">
-                <img src="static/img/portfolio/wavetext.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="WaveText — real-time messaging app built with Django and WebSockets" loading="lazy" width="438"
-                  height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>WaveText — Real-Time Messaging App</h3>
-                <p>A real-time messaging platform built with Django Channels and WebSockets, supporting instant communication.</p>
-                <a href="https://github.com/supriyo116/wavetext" target="_blank" class="details-link"
-                  rel="noopener noreferrer" aria-label="View WaveText messaging app on GitHub">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
+            <article class="project-row portfolio-item isotope-item filter-projects" data-aos="fade-right">
+              <div class="project-visual">
+                <div class="project-circle">
+                  <picture>
+                    <source srcset="static/img/portfolio/wavetext.webp" type="image/webp">
+                    <img src="static/img/portfolio/wavetext.png"
+                      alt="WaveText — real-time messaging app built with Django and WebSockets" loading="lazy"
+                      width="600" height="600">
+                  </picture>
+                </div>
+              </div>
+              <div class="project-content">
+                <span class="project-label">Realtime &middot; Backend &middot; Web</span>
+                <h3 class="project-title">WaveText — Real-Time Messaging App</h3>
+                <p class="project-desc">A real-time messaging platform built with Django Channels and WebSockets,
+                  supporting instant communication and online presence.</p>
+                <div class="project-tags">
+                  <span>Django</span><span>WebSockets</span><span>Channels</span>
+                </div>
+                <p class="project-highlight">Low-latency messaging at scale</p>
+                <a href="https://github.com/supriyo116/wavetext" target="_blank" rel="noopener" class="project-link">View
+                  Project -&gt;</a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-projects">
-              <picture>
-                <source srcset="static/img/portfolio/Prosthetics.webp" type="image/webp">
-                <img src="static/img/portfolio/Prosthetics.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="EMG Sensor-controlled prosthetics system using Raspberry Pi for movement detection"
-                  loading="lazy" width="679" height="382">
-              </picture>
-              <div class="portfolio-info">
-                <h3>EMG Sensor-Driven Prosthetics System</h3>
-                <p>Developed a system using Raspberry Pi &amp; EMG sensors to improve movement detection accuracy for below-knee prosthetics.</p>
-                <a href="https://github.com/supriyo116/BelowKneeProsthetics" target="_blank" class="details-link"
-                  rel="noopener noreferrer" aria-label="View EMG Prosthetics project on GitHub">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
+            <article class="project-row project-row--flip portfolio-item isotope-item filter-projects"
+              data-aos="fade-left">
+              <div class="project-visual">
+                <div class="project-circle">
+                  <picture>
+                    <source srcset="static/img/portfolio/Prosthetics.webp" type="image/webp">
+                    <img src="static/img/portfolio/Prosthetics.png"
+                      alt="EMG Sensor-controlled prosthetics system using Raspberry Pi for movement detection"
+                      loading="lazy" width="600" height="600">
+                  </picture>
+                </div>
+              </div>
+              <div class="project-content">
+                <span class="project-label">IoT &middot; Hardware &middot; ML</span>
+                <h3 class="project-title">EMG Sensor-Driven Prosthetics System</h3>
+                <p class="project-desc">Developed a system using Raspberry Pi &amp; EMG sensors to improve movement
+                  detection accuracy for below-knee prosthetics.</p>
+                <div class="project-tags">
+                  <span>Raspberry Pi</span><span>Python</span><span>EMG</span>
+                </div>
+                <p class="project-highlight">Improved signal detection reliability</p>
+                <a href="https://github.com/supriyo116/BelowKneeProsthetics" target="_blank" rel="noopener"
+                  class="project-link">View Project -&gt;</a>
               </div>
             </article>
 
             <!-- Achievements -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
-              <picture>
-                <source srcset="static/img/portfolio/Panasonic.webp" type="image/webp">
-                <img src="static/img/portfolio/Panasonic.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Panasonic Asia Scholarship Award 2022 — Supriyo Bhattacharya" loading="lazy" width="492"
-                  height="438">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Panasonic Asia Scholarship Winner (2022)</h3>
+            <article class="achievement-row portfolio-item isotope-item filter-achievements" data-aos="fade-up">
+              <div class="achievement-year">2022</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Panasonic Asia Scholarship Winner</h3>
+                <p class="achievement-desc">One of 30 scholars selected across Asia Pacific for academic excellence and
+                  leadership potential.</p>
                 <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank"
-                  class="details-link" rel="noopener noreferrer"
-                  aria-label="View Panasonic Asia Scholarship certificate">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
+                  rel="noopener" class="achievement-link">View Certificate -&gt;</a>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
-              <picture>
-                <source srcset="static/img/portfolio/JEE%20Adv.webp" type="image/webp">
-                <img src="static/img/portfolio/JEE%20Adv.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="JEE Advanced 2022 — All India Rank 8934" loading="lazy" width="438" height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>JEE Advanced 2022 — AIR 8934</h3>
-                <p>Secured All India Rank 8934 in JEE Advanced 2022, one of India's most competitive engineering entrance exams.</p>
+            <article class="achievement-row portfolio-item isotope-item filter-achievements" data-aos="fade-up">
+              <div class="achievement-year">2022</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">JEE Advanced 2022 &mdash; AIR 8934</h3>
+                <p class="achievement-desc">Secured All India Rank 8934 in one of India's most competitive engineering
+                  entrance exams.</p>
               </div>
             </article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-achievements">
-              <picture>
-                <source srcset="static/img/portfolio/ChanakyaFellow.webp" type="image/webp">
-                <img src="static/img/portfolio/ChanakyaFellow.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Chanakya Fellowship 2024 — Agentic Tsetlin Machine for Skin Cancer Detection research"
-                  loading="lazy" width="438" height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Chanakya Fellowship Program (2024)</h3>
-                <p>Selected for government-funded research fellowship on "Agentic Tsetlin Machine for Skin Cancer Detection."</p>
+            <article class="achievement-row portfolio-item isotope-item filter-achievements" data-aos="fade-up">
+              <div class="achievement-year">2024</div>
+              <div class="achievement-content">
+                <h3 class="achievement-title">Chanakya Fellowship Program</h3>
+                <p class="achievement-desc">Selected for government-funded research fellowship on Agentic Tsetlin
+                  Machine for Skin Cancer Detection.</p>
                 <a href="https://drive.google.com/file/d/14hkNdpyFCAGX0mpYEXIvzCDpDMGh6L-H/view" target="_blank"
-                  class="details-link" rel="noopener noreferrer" aria-label="View Chanakya Fellowship certificate">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
+                  rel="noopener" class="achievement-link">View Certificate -&gt;</a>
               </div>
             </article>
+<!-- Certifications -->
+<article class="cert-item portfolio-item isotope-item filter-certifications" data-aos="fade-up">
+  <div class="cert-top">
+    <span class="cert-issuer">Udemy</span>
+    <a href="https://www.udemy.com/certificate/UC-32c8b2a4-6acb-468d-b684-9ac8f41f66d9/"
+       target="_blank" rel="noopener" class="cert-link">Verify →</a>
+  </div>
+  <h3 class="cert-title">Machine Learning &amp; Deep Learning</h3>
+</article>
 
-            <!-- Certifications -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
-              <picture>
-                <source srcset="static/img/portfolio/udemy.webp" type="image/webp">
-                <img src="static/img/portfolio/udemy.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Udemy Machine Learning and Deep Learning Certification — Supriyo Bhattacharya" loading="lazy"
-                  width="438" height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Machine Learning &amp; Deep Learning (Udemy)</h3>
-                <a href="https://www.udemy.com/certificate/UC-32c8b2a4-6acb-468d-b684-9ac8f41f66d9/" target="_blank"
-                  class="details-link" rel="noopener noreferrer"
-                  aria-label="View Udemy ML and Deep Learning certificate">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
-              </div>
-            </article>
+<article class="cert-item portfolio-item isotope-item filter-certifications" data-aos="fade-up">
+  <div class="cert-top">
+    <span class="cert-issuer">Google</span>
+    <a href="https://coursera.org/share/ed61cd39d2436c8c7bf62f2e728bd845"
+       target="_blank" rel="noopener" class="cert-link">Verify →</a>
+  </div>
+  <h3 class="cert-title">Advanced Data Analytics</h3>
+</article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
-              <picture>
-                <source srcset="static/img/portfolio/google.webp" type="image/webp">
-                <img src="static/img/portfolio/google.jpg"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Google Advanced Data Analytics Professional Certificate" loading="lazy" width="438" height="438">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Advanced Data Analytics (Google)</h3>
-                <a href="https://coursera.org/share/ed61cd39d2436c8c7bf62f2e728bd845" target="_blank"
-                  class="details-link" rel="noopener noreferrer"
-                  aria-label="View Google Advanced Data Analytics certificate">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
-              </div>
-            </article>
+<article class="cert-item portfolio-item isotope-item filter-certifications" data-aos="fade-up">
+  <div class="cert-top">
+    <span class="cert-issuer">Google</span>
+    <a href="https://coursera.org/share/60453b2039ca2210c08ddd9daf3d3f22"
+       target="_blank" rel="noopener" class="cert-link">Verify →</a>
+  </div>
+  <h3 class="cert-title">Cybersecurity Professional Certificate</h3>
+</article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-certifications">
-              <picture>
-                <source srcset="static/img/portfolio/google.webp" type="image/webp">
-                <img src="static/img/portfolio/google.jpg"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Google Cybersecurity Professional Certificate" loading="lazy" width="438" height="438">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Cybersecurity Professional Certificate (Google)</h3>
-                <a href="https://coursera.org/share/60453b2039ca2210c08ddd9daf3d3f22" target="_blank"
-                  class="details-link" rel="noopener noreferrer"
-                  aria-label="View Google Cybersecurity Professional certificate">
-                  <i class="bi bi-link-45deg" aria-hidden="true"></i>
-                </a>
-              </div>
-            </article>
+<!-- Responsibilities & Volunteering -->
+<article class="resp-item portfolio-item isotope-item filter-responsibility" data-aos="fade-up">
+  <span class="resp-timeline-dot" aria-hidden="true"></span>
+  <div class="resp-content">
+    <span class="resp-period">2022 – 2023</span>
+    <h3 class="resp-title">Class Representative, IIT Jammu</h3>
+  </div>
+</article>
 
-            <!-- Responsibilities & Volunteering -->
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-responsibility">
-              <picture>
-                <source srcset="static/img/portfolio/IITJammu.webp" type="image/webp">
-                <img src="static/img/portfolio/IITJammu.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Class Representative at IIT Jammu 2022–2023" loading="lazy" width="438" height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Class Representative, IIT Jammu (2022–2023)</h3>
-              </div>
-            </article>
+<article class="resp-item portfolio-item isotope-item filter-responsibility" data-aos="fade-up">
+  <span class="resp-timeline-dot" aria-hidden="true"></span>
+  <div class="resp-content">
+    <span class="resp-period">2024 – Present</span>
+    <h3 class="resp-title">Placement Coordinator, IIT Jammu</h3>
+  </div>
+</article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-responsibility">
-              <picture>
-                <source srcset="static/img/portfolio/IITJammu.webp" type="image/webp">
-                <img src="static/img/portfolio/IITJammu.png"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="Placement Coordinator at IIT Jammu 2024–Present" loading="lazy" width="438" height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>Placement Coordinator, IIT Jammu (2024–Present)</h3>
-              </div>
-            </article>
+<article class="resp-item portfolio-item isotope-item filter-responsibility" data-aos="fade-up">
+  <span class="resp-timeline-dot" aria-hidden="true"></span>
+  <div class="resp-content">
+    <span class="resp-period">2023 – 2024</span>
+    <h3 class="resp-title">NSS Volunteer, IIT Jammu</h3>
+  </div>
+</article>
 
-            <article class="col-lg-4 col-md-6 portfolio-item isotope-item filter-responsibility">
-              <picture>
-                <source srcset="static/img/portfolio/NSS.webp" type="image/webp">
-                <img src="static/img/portfolio/NSS.jpg"
-                  style="width:100%; height:250px; object-fit: contain; background-color: #f8f9fa; border-radius: 8px;"
-                  alt="NSS Volunteer IIT Jammu 2023–2024" loading="lazy" width="438" height="250">
-              </picture>
-              <div class="portfolio-info">
-                <h3>NSS Volunteer, IIT Jammu (2023–2024)</h3>
-              </div>
-            </article>
 
           </div><!-- End Portfolio Container -->
 
@@ -824,8 +760,9 @@
     <section id="contact" class="contact section" aria-labelledby="contact-heading">
 
       <div class="container section-title" data-aos="fade-up">
+        <span class="section-label">CONTACT</span>
         <h2 id="contact-heading">Contact</h2>
-        <p>Have an Idea? Let's Talk and Make It Happen!</p>
+        <p class="section-lead">Have an Idea? Let's Talk and Make It Happen!</p>
       </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
@@ -834,7 +771,7 @@
 
           <div class="col-lg-4">
             <address>
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Address</h3>
@@ -842,7 +779,7 @@
                 </div>
               </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Call</h3>
@@ -850,7 +787,7 @@
                 </div>
               </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Email</h3>
@@ -861,40 +798,42 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="/send-email" method="post" id="contact-form" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200" aria-label="Contact form">
-              <div class="row gy-4">
+            <div class="contact-form-wrap" data-aos="fade-up" data-aos-delay="200">
+              <form action="/send-email" method="post" id="contact-form" class="php-email-form"
+                aria-label="Contact form">
+                <div class="row gy-4">
 
-                <div class="col-md-6">
-                  <label for="contact-name" class="visually-hidden">Your Name</label>
-                  <input type="text" id="contact-name" name="name" class="form-control" placeholder="Your Name" required
-                    autocomplete="name">
+                  <div class="col-md-6">
+                    <label for="contact-name" class="visually-hidden">Your Name</label>
+                    <input type="text" id="contact-name" name="name" class="form-control" placeholder="Your Name"
+                      required autocomplete="name">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contact-email" class="visually-hidden">Your Email</label>
+                    <input type="email" id="contact-email" class="form-control" name="email" placeholder="Your Email"
+                      required autocomplete="email">
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="contact-subject" class="visually-hidden">Subject</label>
+                    <input type="text" id="contact-subject" class="form-control" name="subject" placeholder="Subject"
+                      required>
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="contact-message" class="visually-hidden">Message</label>
+                    <textarea id="contact-message" class="form-control" name="message" rows="6" placeholder="Message"
+                      required></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <button type="submit" aria-label="Send message to Supriyo Bhattacharya">Send Message</button>
+                  </div>
+
                 </div>
-
-                <div class="col-md-6">
-                  <label for="contact-email" class="visually-hidden">Your Email</label>
-                  <input type="email" id="contact-email" class="form-control" name="email" placeholder="Your Email"
-                    required autocomplete="email">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="contact-subject" class="visually-hidden">Subject</label>
-                  <input type="text" id="contact-subject" class="form-control" name="subject" placeholder="Subject"
-                    required>
-                </div>
-
-                <div class="col-md-12">
-                  <label for="contact-message" class="visually-hidden">Message</label>
-                  <textarea id="contact-message" class="form-control" name="message" rows="6" placeholder="Message"
-                    required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <button type="submit" aria-label="Send message to Supriyo Bhattacharya">Send Message</button>
-                </div>
-
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
 
         </div>
@@ -908,7 +847,8 @@
   <footer id="footer" class="footer position-relative light-background" role="contentinfo">
     <div class="container">
       <h2 class="sitename">Supriyo Bhattacharya</h2>
-      <p>AI/ML Developer &amp; Software Engineer — IIT Jammu | Building intelligent systems that make a difference.</p>
+      <p>AI/ML Developer &amp; Software Engineer &mdash; IIT Jammu | Building intelligent systems that make a difference.
+      </p>
       <div class="social-links d-flex justify-content-center" aria-label="Social media links">
         <a href="https://github.com/supriyo116" aria-label="Supriyo Bhattacharya on GitHub" rel="noopener noreferrer me"
           target="_blank"><i class="bi bi-github" aria-hidden="true"></i></a>
@@ -920,7 +860,7 @@
       <div class="container">
         <div class="copyright">
           <span>Copyright &copy; <span id="year"></span></span> <strong class="px-1 sitename">Supriyo
-            Bhattacharya</strong> <span>— All Rights Reserved</span>
+            Bhattacharya</strong> <span>&mdash; All Rights Reserved</span>
         </div>
       </div>
     </div>
